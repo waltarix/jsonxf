@@ -8,6 +8,7 @@ repository = "https://github.com/gamache/jsonxf"
 keywords = ["json", "pretty-print", "pretty", "minimize"]
 categories = ["encoding", "rendering", "text-processing", "value-formatting"]
 license = "MIT"
+edition = "2021"
 
 [dependencies]
 getopts = "0.2"
@@ -22,3 +23,7 @@ name = "jsonxf"
 path = "src/main.rs"
 doc = false
 
+[profile.release]
+strip = true
+opt-level = 2
+lto = true
